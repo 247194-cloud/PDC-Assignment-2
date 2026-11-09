@@ -178,3 +178,13 @@ This question compares thread-safe inventory data structures.
 - ConcurrentHashMap supports concurrent access. 
 - Multiple threads perform inventory lookups and updates. 
 - Execution time and throughput are used for comparison. 
+ 
+## Question 7 - Cache Locality Benchmark 
+ 
+This question compares row-major and column-major matrix traversal. 
+ 
+- The program uses a two-dimensional matrix. 
+- Row-major traversal accesses elements row by row. 
+- Column-major traversal accesses elements column by column. 
+- System.nanoTime measures execution time. 
+- Cache locality helps explain differences in memory access performance. 
