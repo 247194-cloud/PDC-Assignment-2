@@ -1,6 +1,6 @@
 import java.util.concurrent.ForkJoinPool;
 
-public class RiskPortfolioApp {
+public class ForkJoinPortfolioApp {
     public static void main(String[] args) {
         int size = 5000;
         double[] portfolio = new double[size];
@@ -39,3 +39,4 @@ public class RiskPortfolioApp {
         pool.shutdown();
     }
 }
+
