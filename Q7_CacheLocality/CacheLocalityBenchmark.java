@@ -41,11 +41,9 @@ public class CacheLocalityBenchmark {
 
         long columnTime = System.nanoTime() - columnStart;
 
-        // Convert nanoseconds into milliseconds
         double rowMs = rowTime / 1_000_000.0;
         double columnMs = columnTime / 1_000_000.0;
 
-        // Calculate speed ratio
         double speedup = (double) columnTime / rowTime;
 
         System.out.println("Matrix Cache Locality Benchmark");
@@ -81,8 +79,31 @@ public class CacheLocalityBenchmark {
         System.out.println("Cache locality benchmark completed.");
     }
 
+    // Validate matrix before traversal
+    private static void validateMatrix(double[][] matrix) {
+
+        if (matrix == null || matrix.length == 0) {
+            throw new IllegalArgumentException(
+                    "Matrix cannot be null or empty");
+        }
+
+        if (matrix[0] == null || matrix[0].length == 0) {
+            throw new IllegalArgumentException(
+                    "Matrix rows cannot be empty");
+        }
+
+        for (double[] row : matrix) {
+            if (row == null || row.length != matrix[0].length) {
+                throw new IllegalArgumentException(
+                        "Matrix must be rectangular");
+            }
+        }
+    }
+
     // Row-Major Traversal
     public static long traverseRowMajor(double[][] matrix) {
+
+        validateMatrix(matrix);
 
         long sum = 0;
 
@@ -98,6 +119,8 @@ public class CacheLocalityBenchmark {
 
     // Column-Major Traversal
     public static long traverseColumnMajor(double[][] matrix) {
+
+        validateMatrix(matrix);
 
         long sum = 0;
 
