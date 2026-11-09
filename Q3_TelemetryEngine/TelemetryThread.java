@@ -1,14 +1,17 @@
 public class TelemetryThread extends Thread {
-    private String threadName;
-
-    public TelemetryThread(String threadName) {
-        this.threadName = threadName;
-    }
 
     @Override
     public void run() {
+
         for (int i = 1; i <= 5; i++) {
-            System.out.println(threadName + " monitoring telemetry record " + i);
+
+            System.out.println(
+                "Telemetry Update " + i +
+                " | CPU Health: Normal" +
+                " | Memory Health: Normal" +
+                " | Current Thread: " +
+                Thread.currentThread().getName()
+            );
 
             try {
                 Thread.sleep(800);
