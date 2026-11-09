@@ -140,3 +140,13 @@ Test Results:
 - ABCD: Symmetrical = false
 
 The program uses an array-based stack and queue to check packet symmetry.
+
+## Question 3 - Telemetry Engine
+
+The Telemetry Engine demonstrates concurrent execution using Java threads.
+
+- LogProcessorTask implements the Runnable interface.
+- TelemetryThread extends the Thread class.
+- The application demonstrates concurrent task execution.
+- The threads use names and sleep intervals to demonstrate execution timing.
+- Each task performs five iterations.
