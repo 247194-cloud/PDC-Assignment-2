@@ -1,191 +1,550 @@
-# Parallel and Distributed Computing Lab Assignment 2
 
-**Course:** CS-426L  
-**Semester:** Fall 2026  
-**University:** Air University, Kharian Campus  
-**Department:** Computer Science  
-**Student Registration Number:** 247194  
-**GitHub:** https://github.com/247194-cloud/PDC-Assignment-2
 
-## Project Overview
+\# Parallel and Distributed Computing Lab Assignment 2
 
-This repository contains seven Java programming tasks for the Parallel and Distributed Computing Lab Assignment 2.
 
-## Question 1 — Event Dispatcher
 
-**Folder:** Q1_EventDispatcher
+\## Student Information
 
-Topics to document:
-- Inheritance
-- Method overriding
-- Runtime polymorphism
-- Constructor initialization
-- Trade event processing
 
-Main Java files:
-- TradeEvent.java
-- FIXOrderEvent.java
-- ReutersQuoteEvent.java
-- TradingEngineApp.java
 
-## Question 2 — Packet Verification
+\- \*\*Course:\*\* CS-426L - Parallel and Distributed Computing Lab
 
-**Folder:** Q2_PacketVerification
+\- \*\*Semester:\*\* Fall 2026
 
-Topics to document:
-- Array-based stack
-- Array-based queue
-- LIFO and FIFO
-- Packet symmetry detection
+\- \*\*University:\*\* Air University, Kharian Campus
 
-Main Java files:
-- TransactionStack.java
-- RequestQueue.java
-- PacketSymmetryAuditor.java
+\- \*\*Department:\*\* Computer Science
 
-## Question 3 — Telemetry Engine
+\- \*\*Registration Number:\*\* 247194
 
-**Folder:** Q3_TelemetryEngine
+\- \*\*Section:\*\* BSCYS-F-24-B
 
-Topics to document:
-- Java Thread class
-- Runnable interface
-- Concurrent execution
-- Thread naming and sleep intervals
+\- \*\*GitHub Repository:\*\* https://github.com/247194-cloud/PDC-Assignment-2
 
-Main Java files:
-- LogProcessorTask.java
-- TelemetryThread.java
-- AsyncWebEngineApp.java
 
-## Question 4 — Parallel Risk Calculator
 
-**Folder:** Q4_RiskCalculator
+\---
 
-Topics to document:
-- Fork/Join framework
-- RecursiveTask
-- RecursiveAction
-- Parallel processing
 
-Main Java files:
-- ParallelRiskCalculator.java
-- PortfolioThresholdTask.java
-- ForkJoinPortfolioApp.java
 
-## Question 5 — Sensor Search
+\## Project Overview
 
-**Folder:** Q5_SensorSearch
 
-Topics to document:
-- Abstract classes
-- Method overriding
-- Parallel minimum search
-- Parallel maximum search
-- Worker threads
 
-Main Java files:
-- SensorSearchEngine.java
-- ParallelMinSearch.java
-- ParallelMaxSearch.java
-- SensorGridMonitorApp.java
+This repository contains seven Java programming tasks developed for Parallel and Distributed Computing Lab Assignment 2.
 
-## Question 6 — Inventory Benchmark
 
-**Folder:** Q6_InventoryBenchmark
 
-Topics to document:
-- HashMap
-- Collections.synchronizedMap()
-- ConcurrentHashMap
-- Concurrent operations
-- Execution time and throughput
+The assignment demonstrates object-oriented programming, data structures, multithreading, parallel processing, concurrent collections, and cache locality.
 
-Main Java files:
-- InventoryCatalogManager.java
-- InventoryBenchmarkApp.java
 
-## Question 7 — Cache Locality Benchmark
 
-**Folder:** Q7_CacheLocality
+\## Question 1 - Event Dispatcher
 
-Topics to document:
-- Two-dimensional arrays
-- Row-major traversal
-- Column-major traversal
-- System.nanoTime()
-- Cache locality and spatial locality
 
-Main Java file:
-- CacheLocalityBenchmark.java
 
-## How to Run the Programs
+\*\*Folder:\*\* `Q1\_EventDispatcher`
 
-Open the required question folder in VS Code, compile its Java files, and run the relevant main class.
 
-## Repository Contents
 
-This repository contains the source-code folders for all seven assignment questions.
-## Question 1 - Compilation and Execution
+\*\*Main files:\*\*
 
-Compile: javac -d out Q1_EventDispatcher\TradeEvent.java Q1_EventDispatcher\FIXOrderEvent.java Q1_EventDispatcher\ReutersQuoteEvent.java Q1_EventDispatcher\TradingEngineApp.java
-Run: java -cp out TradingEngineApp
+\- TradeEvent.java
 
-## Question 2 - Packet Verification Testing
+\- FIXOrderEvent.java
 
-The PacketSymmetryAuditor program was compiled and executed successfully.
+\- ReutersQuoteEvent.java
 
-Test Results:
-- ABBA: Symmetrical = true
-- ABCD: Symmetrical = false
+\- TradingEngineApp.java
 
-The program uses an array-based stack and queue to check packet symmetry.
 
-## Question 3 - Telemetry Engine
 
-The Telemetry Engine demonstrates concurrent execution using Java threads.
+\*\*Concepts demonstrated:\*\*
 
-- LogProcessorTask implements the Runnable interface.
-- TelemetryThread extends the Thread class.
-- The application demonstrates concurrent task execution.
-- The threads use names and sleep intervals to demonstrate execution timing.
-- Each task performs five iterations.
- 
-## Question 4 - Parallel Risk Calculator 
- 
-This question demonstrates parallel risk calculation using the Java Fork Join framework. 
- 
-- RecursiveTask is used for tasks that return results. 
-- RecursiveAction is used for tasks that perform actions without returning a result. 
-- The program divides work into smaller tasks using a threshold. 
-- Fork and join operations support parallel execution. 
- 
-## Question 5 - Parallel Sensor Search 
- 
-This question demonstrates parallel searching in a sensor data array. 
- 
-- SensorSearchEngine provides an abstract search structure. 
-- ParallelMinSearch finds the minimum value. 
-- ParallelMaxSearch finds the maximum value. 
-- The sensor data is divided among four workers. 
-- Parallel execution helps process large datasets. 
- 
-## Question 6 - Inventory Benchmark 
- 
-This question compares thread-safe inventory data structures. 
- 
-- Collections.synchronizedMap provides synchronized map operations. 
-- ConcurrentHashMap supports concurrent access. 
-- Multiple threads perform inventory lookups and updates. 
-- Execution time and throughput are used for comparison. 
- 
-## Question 7 - Cache Locality Benchmark 
- 
-This question compares row-major and column-major matrix traversal. 
- 
-- The program uses a two-dimensional matrix. 
-- Row-major traversal accesses elements row by row. 
-- Column-major traversal accesses elements column by column. 
-- System.nanoTime measures execution time. 
-- Cache locality helps explain differences in memory access performance. 
+\- Inheritance
+
+\- Method overriding
+
+\- Runtime polymorphism
+
+\- Constructor initialization
+
+\- Trade event processing
+
+\- FIX purchase fee calculation
+
+\- Reuters bid-ask spread calculation
+
+
+
+\*\*Verified results:\*\*
+
+\- FIX processing fee: 15.0
+
+\- Total purchase amount: 10015.0
+
+\- Reuters spread: 0.75
+
+
+
+\## Question 2 - Packet Verification
+
+
+
+\*\*Folder:\*\* `Q2\_PacketVerification`
+
+
+
+\*\*Main files:\*\*
+
+\- TransactionStack.java
+
+\- RequestQueue.java
+
+\- PacketSymmetryAuditor.java
+
+
+
+\*\*Concepts demonstrated:\*\*
+
+\- Array-based stack
+
+\- Array-based queue
+
+\- LIFO and FIFO operations
+
+\- Push, pop, peek, enqueue and dequeue
+
+\- Packet symmetry verification
+
+
+
+\*\*Verified results:\*\*
+
+\- ABBA: Symmetrical = true
+
+\- ABCD: Symmetrical = false
+
+
+
+\## Question 3 - Multithreaded Telemetry Engine
+
+
+
+\*\*Folder:\*\* `Q3\_TelemetryEngine`
+
+
+
+\*\*Main files:\*\*
+
+\- LogProcessorTask.java
+
+\- TelemetryThread.java
+
+\- AsyncWebEngineApp.java
+
+
+
+\*\*Concepts demonstrated:\*\*
+
+\- Runnable interface
+
+\- Thread class
+
+\- Concurrent execution
+
+\- Thread naming
+
+\- Thread.sleep()
+
+\- Thread.join()
+
+\- Thread execution states
+
+
+
+\*\*Implementation details:\*\*
+
+\- Five iterations per worker
+
+\- Log worker sleep interval: 1000 ms
+
+\- Telemetry worker sleep interval: 800 ms
+
+\- Worker names: Log-Worker and Telemetry-Worker
+
+
+
+Both workers complete their execution before the main program terminates.
+
+
+
+\## Question 4 - Parallel Risk Calculator
+
+
+
+\*\*Folder:\*\* `Q4\_RiskCalculator`
+
+
+
+\*\*Main files:\*\*
+
+\- ParallelRiskCalculator.java
+
+\- PortfolioThresholdTask.java
+
+\- ForkJoinPortfolioApp.java
+
+
+
+\*\*Concepts demonstrated:\*\*
+
+\- Fork/Join framework
+
+\- RecursiveTask
+
+\- RecursiveAction
+
+\- ForkJoinPool
+
+\- Parallel processing
+
+\- Task decomposition
+
+
+
+\*\*Implementation details:\*\*
+
+\- Portfolio size: 10000
+
+\- Task chunk size: 1000
+
+\- Risk limit: 10000.0
+
+\- Stress penalty: 5%
+
+
+
+\*\*Verified results:\*\*
+
+\- Total portfolio risk before stress: 7.425E7
+
+\- Values above risk limit after adjustment: 3300
+
+
+
+\## Question 5 - Parallel Sensor Search
+
+
+
+\*\*Folder:\*\* `Q5\_SensorSearch`
+
+
+
+\*\*Main files:\*\*
+
+\- SensorSearchEngine.java
+
+\- ParallelMinSearch.java
+
+\- ParallelMaxSearch.java
+
+\- SensorGridMonitorApp.java
+
+
+
+\*\*Concepts demonstrated:\*\*
+
+\- Abstract classes
+
+\- Method overriding
+
+\- Parallel minimum search
+
+\- Parallel maximum search
+
+\- Multithreading
+
+\- Work division among threads
+
+
+
+\*\*Implementation details:\*\*
+
+\- Total sensor readings: 50000
+
+\- Worker threads: 4
+
+
+
+\*\*Verified results:\*\*
+
+\- Global minimum: 0.0
+
+\- Global maximum: 9999.0
+
+
+
+\## Question 6 - Inventory Concurrency Benchmark
+
+
+
+\*\*Folder:\*\* `Q6\_InventoryBenchmark`
+
+
+
+\*\*Main files:\*\*
+
+\- InventoryCatalogManager.java
+
+\- InventoryBenchmarkApp.java
+
+
+
+\*\*Concepts demonstrated:\*\*
+
+\- HashMap
+
+\- Collections.synchronizedMap()
+
+\- ConcurrentHashMap
+
+\- Concurrent lookups and updates
+
+\- ExecutorService
+
+\- Performance measurement
+
+\- Throughput calculation
+
+
+
+\*\*Implementation details:\*\*
+
+\- Products in catalog: 1000
+
+\- Worker threads: 10
+
+\- Operations per worker: 50000
+
+\- Total operations per benchmark: 500000
+
+\- Product IDs: String
+
+\- Stock values: Integer
+
+
+
+\*\*Observed benchmark results:\*\*
+
+\- SynchronizedMap time: 243.21 ms
+
+\- ConcurrentHashMap time: 130.24 ms
+
+\- SynchronizedMap throughput: 2055806.09 operations/second
+
+\- ConcurrentHashMap throughput: 3838924.86 operations/second
+
+
+
+ConcurrentHashMap was faster in this recorded execution. Performance can vary between runs and computers.
+
+
+
+\## Question 7 - Cache Locality Benchmark
+
+
+
+\*\*Folder:\*\* `Q7\_CacheLocality`
+
+
+
+\*\*Main file:\*\*
+
+\- CacheLocalityBenchmark.java
+
+
+
+\*\*Concepts demonstrated:\*\*
+
+\- Two-dimensional double arrays
+
+\- Row-major traversal
+
+\- Column-major traversal
+
+\- System.nanoTime()
+
+\- Cache lines
+
+\- Spatial locality
+
+\- Execution time comparison
+
+
+
+\*\*Implementation details:\*\*
+
+\- Matrix dimensions: 2000 x 2000
+
+\- Data type: double
+
+\- Benchmark iterations: 10
+
+\- Two warm-up iterations
+
+\- Total and average execution time
+
+\- Row-major versus column-major speed ratio
+
+
+
+\*\*Expected checksum:\*\* 7996000000
+
+
+
+Execution times and speed ratios depend on the computer and JVM.
+
+
+
+\---
+
+
+
+\## How to Compile and Run
+
+
+
+Open CMD and navigate to the required question folder.
+
+
+
+Compile all Java source files:
+
+
+
+```cmd
+
+javac \*.java
+
+```
+
+
+
+Run the appropriate main class:
+
+
+
+| Question | Main class |
+
+|---|---|
+
+| Q1 | TradingEngineApp |
+
+| Q2 | PacketSymmetryAuditor |
+
+| Q3 | AsyncWebEngineApp |
+
+| Q4 | ForkJoinPortfolioApp |
+
+| Q5 | SensorGridMonitorApp |
+
+| Q6 | InventoryBenchmarkApp |
+
+| Q7 | CacheLocalityBenchmark |
+
+
+
+Example for Question 6:
+
+
+
+```cmd
+
+cd /d "C:\\Users\\Windows 11\\Desktop\\PDC\_Lab\_Assignment\_2\\Q6\_InventoryBenchmark"
+
+javac \*.java
+
+java InventoryBenchmarkApp
+
+```
+
+
+
+\---
+
+
+
+\## Repository Structure
+
+
+
+```text
+
+PDC\_Lab\_Assignment\_2
+
+|
+
+|-- Q1\_EventDispatcher
+
+|-- Q2\_PacketVerification
+
+|-- Q3\_TelemetryEngine
+
+|-- Q4\_RiskCalculator
+
+|-- Q5\_SensorSearch
+
+|-- Q6\_InventoryBenchmark
+
+|-- Q7\_CacheLocality
+
+|-- verify-all.bat
+
+|-- README.md
+
+|-- .gitignore
+
+```
+
+
+
+\---
+
+
+
+\## Technologies Used
+
+
+
+\- Java
+
+\- Object-Oriented Programming
+
+\- Java Collections Framework
+
+\- Multithreading
+
+\- ExecutorService
+
+\- Fork/Join Framework
+
+\- ConcurrentHashMap
+
+\- Git and GitHub
+
+
+
+\## Conclusion
+
+
+
+This assignment demonstrates important concepts of parallel and distributed computing through seven Java programming tasks.
+
+
+
+The programs cover event processing, packet verification, multithreading, parallel risk calculation, sensor searching, concurrent inventory management, and memory cache locality.
+
+
 
