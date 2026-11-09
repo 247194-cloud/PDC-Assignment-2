@@ -130,3 +130,13 @@ This repository contains the source-code folders for all seven assignment questi
 
 Compile: javac -d out Q1_EventDispatcher\TradeEvent.java Q1_EventDispatcher\FIXOrderEvent.java Q1_EventDispatcher\ReutersQuoteEvent.java Q1_EventDispatcher\TradingEngineApp.java
 Run: java -cp out TradingEngineApp
+
+## Question 2 - Packet Verification Testing
+
+The PacketSymmetryAuditor program was compiled and executed successfully.
+
+Test Results:
+- ABBA: Symmetrical = true
+- ABCD: Symmetrical = false
+
+The program uses an array-based stack and queue to check packet symmetry.
