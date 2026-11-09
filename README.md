@@ -126,3 +126,7 @@ Open the required question folder in VS Code, compile its Java files, and run th
 ## Repository Contents
 
 This repository contains the source-code folders for all seven assignment questions.
+## Question 1 - Compilation and Execution
+
+Compile: javac -d out Q1_EventDispatcher\TradeEvent.java Q1_EventDispatcher\FIXOrderEvent.java Q1_EventDispatcher\ReutersQuoteEvent.java Q1_EventDispatcher\TradingEngineApp.java
+Run: java -cp out TradingEngineApp
