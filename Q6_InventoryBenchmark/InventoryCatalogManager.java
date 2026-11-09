@@ -1,35 +1,51 @@
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class InventoryCatalogManager {
-    private final Map<Integer, Integer> synchronizedCatalog =
+
+    private final Map<String, Integer> synchronizedCatalog =
             Collections.synchronizedMap(new HashMap<>());
 
-    private final Map<Integer, Integer> concurrentCatalog =
+    private final Map<String, Integer> concurrentCatalog =
             new ConcurrentHashMap<>();
 
     public InventoryCatalogManager(int itemCount) {
+
         for (int i = 0; i < itemCount; i++) {
-            synchronizedCatalog.put(i, 100);
-            concurrentCatalog.put(i, 100);
+
+            String productId = "PRODUCT-" + i;
+
+            synchronizedCatalog.put(productId, 100);
+            concurrentCatalog.put(productId, 100);
         }
     }
 
-    public void updateSynchronized(int itemId) {
-        synchronizedCatalog.compute(itemId, (key, value) -> value + 1);
+    public void updateSynchronized(String productId) {
+
+        synchronizedCatalog.compute(
+                productId,
+                (key, value) -> value == null ? 1 : value + 1
+        );
     }
 
-    public void updateConcurrent(int itemId) {
-        concurrentCatalog.compute(itemId, (key, value) -> value + 1);
+    public void updateConcurrent(String productId) {
+
+        concurrentCatalog.compute(
+                productId,
+                (key, value) -> value == null ? 1 : value + 1
+        );
     }
 
-    public int lookupSynchronized(int itemId) {
-        return synchronizedCatalog.getOrDefault(itemId, 0);
+    public int lookupSynchronized(String productId) {
+
+        return synchronizedCatalog.getOrDefault(productId, 0);
     }
 
-    public int lookupConcurrent(int itemId) {
-        return concurrentCatalog.getOrDefault(itemId, 0);
+    public int lookupConcurrent(String productId) {
+
+        return concurrentCatalog.getOrDefault(productId, 0);
     }
 }
