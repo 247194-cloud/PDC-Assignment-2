@@ -40,7 +40,7 @@ Topics to document:
 
 Main Java files:
 - TransactionStack.java
-- TransactionQueue.java
+- RequestQueue.java
 - PacketSymmetryAuditor.java
 
 ## Question 3 — Telemetry Engine
@@ -71,7 +71,7 @@ Topics to document:
 Main Java files:
 - ParallelRiskCalculator.java
 - PortfolioThresholdTask.java
-- RiskPortfolioApp.java
+- ForkJoinPortfolioApp.java
 
 ## Question 5 — Sensor Search
 
@@ -188,3 +188,4 @@ This question compares row-major and column-major matrix traversal.
 - Column-major traversal accesses elements column by column. 
 - System.nanoTime measures execution time. 
 - Cache locality helps explain differences in memory access performance. 
+
