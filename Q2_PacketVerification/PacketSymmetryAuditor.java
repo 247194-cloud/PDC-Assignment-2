@@ -8,7 +8,7 @@ public class PacketSymmetryAuditor {
         }
 
         TransactionStack stack = new TransactionStack(capacity);
-        TransactionQueue queue = new TransactionQueue(capacity);
+        RequestQueue queue = new RequestQueue(capacity);
 
         for (int i = 0; i < payload.length(); i++) {
             char c = payload.charAt(i);
@@ -38,3 +38,4 @@ public class PacketSymmetryAuditor {
         System.out.println("Symmetrical: " + isSymmetrical(payload2));
     }
 }
+

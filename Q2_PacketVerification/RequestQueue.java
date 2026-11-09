@@ -1,10 +1,10 @@
-public class TransactionQueue {
+public class RequestQueue {
     private char[] queue;
     private int front;
     private int rear;
     private int size;
 
-    public TransactionQueue(int capacity) {
+    public RequestQueue(int capacity) {
         queue = new char[capacity];
         front = 0;
         rear = -1;
@@ -44,3 +44,4 @@ public class TransactionQueue {
         return size == 0;
     }
 }
+
