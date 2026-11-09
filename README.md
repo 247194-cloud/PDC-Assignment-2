@@ -159,3 +159,13 @@ This question demonstrates parallel risk calculation using the Java Fork Join fr
 - RecursiveAction is used for tasks that perform actions without returning a result. 
 - The program divides work into smaller tasks using a threshold. 
 - Fork and join operations support parallel execution. 
+ 
+## Question 5 - Parallel Sensor Search 
+ 
+This question demonstrates parallel searching in a sensor data array. 
+ 
+- SensorSearchEngine provides an abstract search structure. 
+- ParallelMinSearch finds the minimum value. 
+- ParallelMaxSearch finds the maximum value. 
+- The sensor data is divided among four workers. 
+- Parallel execution helps process large datasets. 
