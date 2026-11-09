@@ -1,6 +1,12 @@
 
 public class PacketSymmetryAuditor {
+
     public static boolean isSymmetrical(String payload) {
+
+        if (payload == null) {
+            throw new IllegalArgumentException("Payload cannot be null");
+        }
+
         int capacity = payload.length();
 
         if (capacity == 0) {
@@ -25,17 +31,25 @@ public class PacketSymmetryAuditor {
         return true;
     }
 
-    public static void main(String[] args) {
-        String payload1 = "ABBA";
-        String payload2 = "ABCD";
-
-        System.out.println("Packet Payload: " + payload1);
-        System.out.println("Symmetrical: " + isSymmetrical(payload1));
-
+    private static void testCase(String payload) {
+        System.out.println("Payload: " + payload);
+        System.out.println("Symmetrical: " + isSymmetrical(payload));
         System.out.println("--------------------");
+    }
 
-        System.out.println("Packet Payload: " + payload2);
-        System.out.println("Symmetrical: " + isSymmetrical(payload2));
+    public static void main(String[] args) {
+
+        testCase("ABBA");
+        testCase("ABCD");
+        testCase("");
+        testCase("A");
+        testCase("ABCBA");
+        testCase("ABCCBA");
+
+        try {
+            isSymmetrical(null);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Null Test: " + e.getMessage());
+        }
     }
 }
-
