@@ -169,3 +169,12 @@ This question demonstrates parallel searching in a sensor data array.
 - ParallelMaxSearch finds the maximum value. 
 - The sensor data is divided among four workers. 
 - Parallel execution helps process large datasets. 
+ 
+## Question 6 - Inventory Benchmark 
+ 
+This question compares thread-safe inventory data structures. 
+ 
+- Collections.synchronizedMap provides synchronized map operations. 
+- ConcurrentHashMap supports concurrent access. 
+- Multiple threads perform inventory lookups and updates. 
+- Execution time and throughput are used for comparison. 
