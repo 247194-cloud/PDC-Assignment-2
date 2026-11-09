@@ -150,3 +150,12 @@ The Telemetry Engine demonstrates concurrent execution using Java threads.
 - The application demonstrates concurrent task execution.
 - The threads use names and sleep intervals to demonstrate execution timing.
 - Each task performs five iterations.
+ 
+## Question 4 - Parallel Risk Calculator 
+ 
+This question demonstrates parallel risk calculation using the Java Fork Join framework. 
+ 
+- RecursiveTask is used for tasks that return results. 
+- RecursiveAction is used for tasks that perform actions without returning a result. 
+- The program divides work into smaller tasks using a threshold. 
+- Fork and join operations support parallel execution. 
